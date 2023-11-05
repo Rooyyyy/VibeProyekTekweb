@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- connect jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- connect fonts -->
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+
+    <!-- for resizable and scrollable div -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <style>
+        .scrollable-div {
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        /* kasih border ke handle */
+        .ui-resizable-handle {
+            border: 3px solid #494949;
+            background: #5f5f5f;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .outlined {
+            border: 1px solid #fff; /* Adjust as needed */
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body class="bg-dark text-white">
+    <nav class="navbar bg-body-tertiary" style="background-color: rgb(0,0,0);">
+        <div class="container-fluid d-flex justify-content-between px-5 mx-3">
+            <a class="navbar-brand fontMonsseratExtraBold" style="font-size: 50px; color: rgb(77, 205, 205);"
+                href="#mainSection">Vibeeeeeee.</a>
+            <a class="nav-item fontMontserratThin"
+                style="font-size: 20px; text-decoration: none ; color: rgb(77, 205, 205);" href="#">Log Out</a>
+        </div>
+    </nav>
+    <section id="mainSection">
+        <div class="row">
+            <!-- left navs -->
+            <div
+                class="col-3 p-0 m-0 fontMonsseratExtraBold d-flex align-items-center justify-content-center resizable">
+                <ul class="nav flex-column text-white">
+                    <li class="nav-item d-inline-flex align-items-center my-3">
+                        <i class="bi bi-play-circle-fill text-white-50"></i>
+                        <a class="nav-link text-white-50" href="nowplaying.html">Now Playing</a>
+                    </li>
+
+                    <!-- active -->
+                    <li class="nav-item d-inline-flex align-items-center my-3">
+                        <i class="bi bi-search text-white"></i>
+                        <a class="nav-link text-white" href="search.html">Search</a>
+                    </li>
+
+                    <li class="nav-item d-inline-flex align-items-center my-3">
+                        <i class="bi bi-search text-white-50"></i>
+                        <a class="nav-link text-white-50" href="#">Discover Playlist</a>
+                    </li>
+
+                    <li class="nav-item d-inline-flex align-items-center my-3">
+                        <i class="bi bi-clock-history text-white-50"></i>
+                        <a class="nav-link text-white-50" href="#">History</a>
+                    </li>
+                    <li class="nav-item d-inline-flex align-items-center my-3">
+                        <i class="bi bi-collection-play-fill text-white-50"></i>
+                        <a class="nav-link text-white-50" href="#">Library</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- main div -->
+            <div class="col scrollable-div p-4">
+                <div class="container-fluid vh-100 d-flex flex-column">
+                    <div class="container-fluid flex-grow-1 p-5">
+
+                        <div class="container-fluid text-center mb-5">
+                            <h1 class="fontMonsseratExtraBold" style="font-size: 50px;">Search</h1>
+                        </div>
+
+                        <div class="container-fluid text-center justify-content-center align-content-center flex-nowrap mb-4">
+                            <input type="text" class="form-control fontMonsseratRegular" placeholder="What to listen to?" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+
+                        <div class="container-fluid d-flex justify-content-center text-center mb-5">
+                            <div class="container-fluid">
+                                <div class="btn-group fontMonsseratExtraBold">
+                                    <button type="button" class="btn btn-outline-primary ">Search by Artist</button>
+                                    <button type="button" class="btn btn-outline-primary ">Search by Title</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid text-center">
+                            <h1 class="fontMonsseratRegular" style="font-size: 20px;">Results</h1>
+                        </div>
+
+                        <div class="container-fluid scrollable-div">
+                            <ul class="list-group list-group-horizontal text-center outlined">
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 60%;">Ghost</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 30%;">Justin Bieber</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 10%;"><a href="nowplaying.html"><i class="bi bi-play-fill text-white"></i></a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal text-center outlined">
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 60%;">As it Was</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 30%;">Harry Styles</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 10%;"><a href="nowplaying.html"><i
+                                            class="bi bi-play-fill text-white"></i></a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal text-center outlined">
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 60%;">Oceans & Engines</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 30%;">NIKI</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 10%;"><a href="nowplaying.html"><i
+                                            class="bi bi-play-fill text-white"></i></a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal text-center outlined">
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 60%;">C.H.R.I.S.Y.E</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 30%;">Diskoria</li>
+                                <li class="list-group-item h-100 bg-dark text-white outlined" style="width: 10%;"><a href="nowplaying.html"><i
+                                            class="bi bi-play-fill text-white"></i></a></li>
+                            </ul>
+                            
+
+                            
+
+
+                        </div>
+                        
+
+                    </div>
+<!-- 
+                    <div class="container-fluid">
+                        <div class="row" id="mainRow">
+
+                            <div class="col-lg-2 col-md-3 col-sm-6 cardCol">
+                                <div class="card text-dark mb-3 border-1 border-dark" style="background-color: rgb(231, 203, 203);">
+                                    <div class="card-header border-1 border-dark d-flex justify-content-between align-items-center">
+                                        <h3>Title</h3>
+                                        <button type="button" class="btn-close cardCloseButton" aria-label="Close"
+                                            data-dismiss="this"></button>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Note here</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-3 col-sm-6 cardCol">
+                                <div class="card text-dark mb-3 border-1 border-dark" style="background-color: rgb(231, 203, 203);">
+                                    <div class="card-header border-1 border-dark d-flex justify-content-between align-items-center">
+                                        <h3>Title</h3>
+                                        <button type="button" class="btn-close cardCloseButton" aria-label="Close" data-dismiss="this"></button>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Note here</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".resizable").resizable({
+                handles: 'e',
+                minWidth: 200, // Minimum width of the resizable div
+                maxWidth: 800, // Maximum width of the resizable div
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
